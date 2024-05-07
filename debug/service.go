@@ -12,7 +12,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"golang.org/x/sys/windows/svc"
+	"github.com/quentin-nozomi/svc-fork"
 )
 
 // Run executes service name by calling appropriate handler function.

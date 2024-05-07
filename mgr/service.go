@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"unsafe"
 
+	"github.com/quentin-nozomi/svc-fork"
 	"golang.org/x/sys/windows"
-	"golang.org/x/sys/windows/svc"
 )
 
 // Service is used to access Windows service.

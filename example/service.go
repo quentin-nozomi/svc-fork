@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/sys/windows/svc"
-	"golang.org/x/sys/windows/svc/debug"
-	"golang.org/x/sys/windows/svc/eventlog"
+	"github.com/quentin-nozomi/svc-fork"
+	"github.com/quentin-nozomi/svc-fork/debug"
+	"github.com/quentin-nozomi/svc-fork/eventlog"
 )
 
 var elog debug.Log
@@ -41,7 +41,7 @@ loop:
 				time.Sleep(100 * time.Millisecond)
 				changes <- c.CurrentStatus
 			case svc.Stop, svc.Shutdown:
-				// golang.org/x/sys/windows/svc.TestExample is verifying this output.
+				// github.com/quentin-nozomi/svc-fork.TestExample is verifying this output.
 				testOutput := strings.Join(args, "-")
 				testOutput += fmt.Sprintf("-%d", c.Context)
 				elog.Info(1, testOutput)

@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"time"
 
-	"golang.org/x/sys/windows/svc"
-	"golang.org/x/sys/windows/svc/mgr"
+	"github.com/quentin-nozomi/svc-fork"
+	"github.com/quentin-nozomi/svc-fork/mgr"
 )
 
 func startService(name string) error {
